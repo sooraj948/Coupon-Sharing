@@ -1,0 +1,4 @@
+1. search functionality
+2. add entries
+3. front end
+
