@@ -1,4 +1,8 @@
 1. search functionality--done kinda(rudimentary)
+    Now add search bar on display.html--done
 2. add entries-Basic done
-3. front end(used)
+3. remove entry-Basic done
+4. home page-Basic done
+5 used button--figure out that template issue
+
 

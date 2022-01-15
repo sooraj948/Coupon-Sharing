@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+   <body>
+      <head>
+         <title></title>
+      </head>
+      <p></p>
+      
+      
+      <p>
+        {% for line in res %}
+        <!-- {{line}} -->
+        <form id="form"> 
+            {% for el in line %}
+                {{el}}
+                
+            {% endfor %}
+            <input type="hidden" name="info" value = {{res}}>
+            <!-- <input type="hidden" name="code" value = {{line}}> -->
+            <input type="submit" id="query" name="modify" value="USED?">
+            
+          </form>
+     </p>
+     {% endfor %}
+
+     <button>
+        <a href = "/new/">
+          Add a new Coupon
+        </a>
+      </button>
+
+      <button>
+        <a href = "/display/">
+          View Available Coupons
+        </a>
+      </button>
+
+      <form id="form"> 
+        <input type="search" id="query" name="company" placeholder="Search by company name">
+        <button>Search</button>
+      </form>
+   </body>
+</html>

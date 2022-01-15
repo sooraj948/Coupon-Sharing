@@ -21,5 +21,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('display/',views.display,name='display'),
     path('new/',views.new_entry,name = 'new'),
+    path('',views.home,name="home"),
     # url(r'^hello/', 'myapp.views.hello', name = 'hello'),
 ]
