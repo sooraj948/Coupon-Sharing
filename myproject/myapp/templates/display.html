@@ -13,11 +13,11 @@
         <form id="form"> 
             {% for el in line %}
                 {{el}}
-                
+      
             {% endfor %}
-            <input type="hidden" name="info" value = {{res}}>
-            <!-- <input type="hidden" name="code" value = {{line}}> -->
-            <input type="submit" id="query" name="modify" value="USED?">
+            <input type="hidden" name="company" value = {{line.0}}>
+            <input type="hidden" name="code" value = {{line.1}}>
+            <input type="submit"  name="modify" value="True">
             
           </form>
      </p>

@@ -10,11 +10,10 @@ def home(request):
 def display(request):
 
     res=get_entries(request)
-    # if ("company" in request.GET and "code" in request.GET and "modify" in request.GET and request.GET["modify"]):
-    #     modify_entry(request)
-    if ("info" in request.GET  and "modify" in request.GET and request.GET["modify"]):
+    if ("company" in request.GET and "code" in request.GET and "modify" in request.GET and request.GET["modify"]):
+        
         modify_entry(request)
-    # return HttpResponse(res)
+    
     return render(request, "display.html", {"res":res})
 
 def new_entry(request):
@@ -47,13 +46,15 @@ def remove_entry(request):
 
 
 def modify_entry(request):
-    s=request.GET["info"]
-    print(s)
-    s=s[1:len(s)-1]
-    l=s.split(",")
+    # s=request.GET["info"]
+    # print(s)
+    # s=s[1:len(s)-1]
+    # l=s.split(",")
     # print(l)
-    comp=request.GET["info"]
-    cod = request.GET["info"]
+    # comp=request.GET["info"]
+    # cod = request.GET["info"]
+    comp=request.GET["company"]
+    cod = request.GET["code"]
     # print(comp,cod)
     obj = Coupon_List.objects.filter(company = comp,code = cod).update(used=True)
     
@@ -68,9 +69,9 @@ def get_entries(request):
         comp  = request.GET["company"]
     
     if (comp!=""):
-        objects = Coupon_List.objects.filter(company = comp,used = False)
+        objects = Coupon_List.objects.filter(company = comp, used = False)
     else:
-        objects = Coupon_List.objects.all()
+        objects = Coupon_List.objects.filter(used=False)
     
     res =[]
     # objects = objects.filter(request.GET["company"])

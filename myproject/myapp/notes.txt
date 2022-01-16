@@ -3,6 +3,6 @@
 2. add entries-Basic done
 3. remove entry-Basic done
 4. home page-Basic done
-5 used button--figure out that template issue
+5 used button--done ig. Only problem is if space is there in a name . Eg "mama earth"
 
 
